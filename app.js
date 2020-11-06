@@ -23,7 +23,11 @@ const app = Vue.createApp({
             }else if(this.picked === 'Friday'){
                 this.friday.push(this.enteredTask);
             }
-            
+            // this.dynamicArrayName.push(this.enteredTask);
+        },
+        removeTask(){
+            this.monday.splice(0,1);
+            // this.dynamicArrayName.splice(dynamicStart,1);
         }
     }
 })

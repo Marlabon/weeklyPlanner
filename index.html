@@ -11,9 +11,9 @@
 <body>
     <header><h1>Your Weekly Planner</h1></header>
     <main id="weeklyPlaner">
-        <section class="userInput">  
+        <section class="wrapper-userInput">  
             <div>
-                <h2>Set day for task</h2>
+                <h2>Set day and name for task</h2>
                 <input type="radio" id="Monday" value="Monday" v-model="picked"> 
                 <label for="Monday">Monday</label>
                 <input type="radio" id="Tuesday" value="Tuesday" v-model="picked">
@@ -24,42 +24,43 @@
                 <label for="Thursday">Thursday</label>
                 <input type="radio" id="Friday" value="Friday" v-model="picked">
                 <label for="Friday">Friday</label>
+                <div class="wrapper-setTask">
+                    <label for="inputTasks">Type in your task:</label>
+                    <input type="text" id="inputTasks"  v-model="enteredTask">
+                    <button @click="addTask">Add Task</button>
+                    <p>You typed: {{picked}} - {{enteredTask}}</p>
+                </div>
             </div>
-            <h2>Set task</h2>
-            <label for="inputTasks">Type in your task</label>
-            <input type="text" id="inputTasks" v-model="enteredTask">
-            <button @click="addTask">Add Task</button>
-            <p>Test Output: {{enteredTask}} {{picked}}</p>
         </section>
-        <section>
+        <section class="wrapper-taskList">
             <h2>Monday</h2>
             <p v-if="monday.length === 0">Feels empty here, no tasks added!</p>
             <ul v-else>
-                <li v-for="task in monday">{{ task }}</li>
+                <li v-for="(task, index) in monday">{{ task }} <button @click="removeTask(index)">X</button></li>
             </ul>
         </section>
-        <section>
+        <section class="wrapper-taskList">
             <h2>Tuesday</h2>
             <p v-if="tuesday.length === 0">Feels empty here, no tasks added!</p>
             <ul v-else>
-                <li v-for="task in tuesday">{{ task }}</li>
+                <li v-for="(task, index) in tuesday">{{ task }} <button @click="removeTask(index)">X</button></li>
             </ul>
         </section>
-        <section>
+        <section class="wrapper-taskList">
             <h2>Wednesday</h2>
             <p v-if="wednesday.length === 0">Feels empty here, no tasks added!</p>
             <ul v-else>
                 <li v-for="task in wednesday">{{ task }}</li>
             </ul>
         </section>
-        <section>
+        <section class="wrapper-taskList">
             <h2>Thursday</h2>
             <p v-if="thursday.length === 0">Feels empty here, no tasks added!</p>
             <ul v-else>
                 <li v-for="task in thursday">{{ task }}</li>
             </ul>
         </section>
-        <section>
+        <section class="wrapper-taskList">
             <h2>Friday</h2>
             <p v-if="friday.length === 0">Feels empty here, no tasks added!</p>
             <ul v-else>
@@ -67,6 +68,6 @@
             </ul>
         </section>
     </main>
-    <footer></footer>
+    <footer><p>Created by Alexander Weinberger</p></footer>
 </body>
 </html>
