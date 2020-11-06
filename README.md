@@ -16,3 +16,7 @@ To-do list:
 * Design and style
 * Delete a task or checkout a task
 
+For the future:
+* Store tasks
+* User login and authentication 
+
