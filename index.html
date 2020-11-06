@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style.css">
+    <script src="https://unpkg.com/vue@next" defer></script>
+    <script src="app.js" defer></script>
+    <title>Weekly Planer</title>
+</head>
+<body>
+    <header><h1>Your Weekly Planer</h1></header>
+    <main id="weeklyPlaner">
+        <section class="userInput">  
+            <div>
+                <h2>Set day for task</h2>
+                <input type="radio" id="Monday" value="Monday" v-model="picked"> 
+                <label for="Monday">Monday</label>
+                <input type="radio" id="Tuesday" value="Tuesday" v-model="picked">
+                <label for="Tuesday">Tuesday</label>
+                <input type="radio" id="Wednesday" value="Wednesday" v-model="picked">
+                <label for="Wednesday">Wednesday</label>
+                <input type="radio" id="Thursday" value="Thursday" v-model="picked">
+                <label for="Thursday">Thursday</label>
+                <input type="radio" id="Friday" value="Friday" v-model="picked">
+                <label for="Friday">Friday</label>
+            </div>
+            <h2>Set task</h2>
+            <label for="inputTasks">Type in your task</label>
+            <input type="text" id="inputTasks" v-model="enteredTask">
+            <button @click="addTask">Add Task</button>
+            <p>Test Output: {{enteredTask}} {{picked}}</p>
+        </section>
+        <section>
+            <h2>Monday</h2>
+            <p v-if="monday.length === 0">Feels empty here, no tasks added!</p>
+            <ul v-else>
+                <li v-for="task in monday">{{ task }}</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Tuesday</h2>
+            <p v-if="tuesday.length === 0">Feels empty here, no tasks added!</p>
+            <ul v-else>
+                <li v-for="task in tuesday">{{ task }}</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Wednesday</h2>
+            <p v-if="wednesday.length === 0">Feels empty here, no tasks added!</p>
+            <ul v-else>
+                <li v-for="task in wednesday">{{ task }}</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Thursday</h2>
+            <p v-if="thursday.length === 0">Feels empty here, no tasks added!</p>
+            <ul v-else>
+                <li v-for="task in thursday">{{ task }}</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Friday</h2>
+            <p v-if="friday.length === 0">Feels empty here, no tasks added!</p>
+            <ul v-else>
+                <li v-for="task in friday">{{ task }}</li>
+            </ul>
+        </section>
+    </main>
+    <footer></footer>
+</body>
+</html>
