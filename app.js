@@ -9,7 +9,17 @@ const app = Vue.createApp({
             tuesday: [],
             wednesday: [],
             thursday: [],
-            friday: []
+            friday: [],
+            // taskObject:{
+            //     belongsToDay: '',
+            //     // arrayIndex: null,
+            //     taskName: '',
+            //     taskDone: false,
+            //     checkoutTask(){
+            //         this.taskDone = true;
+            //     },
+            //     deleteTask(){}
+            // }
         };
     },
     methods:{
