@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Scope+One&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/vue@next" defer></script>
     <script src="app.js" defer></script>
     <title>Weekly Planer</title>
@@ -28,7 +29,7 @@
                     <label for="inputTasks">Type in your task:</label>
                     <input type="text" id="inputTasks"  v-model="enteredTask">
                     <button @click="addTask">Add Task</button>
-                    <p>You typed: {{picked}} - {{enteredTask}}</p>
+                    <p>You typed: {{picked}} - {{logTask}}</p>
                 </div>
             </div>
         </section>
@@ -36,35 +37,35 @@
             <h2>Monday</h2>
             <p v-if="monday.length === 0">Feels empty here, no tasks added!</p>
             <ul v-else>
-                <li v-for="(task, index) in monday">{{ task }} <button @click="removeTask(index)">X</button></li>
+                <li v-for="(task, index) in monday">{{ task }} <button @click="removeTaskMonday(index)">X</button></li>
             </ul>
         </section>
         <section class="wrapper-taskList">
             <h2>Tuesday</h2>
             <p v-if="tuesday.length === 0">Feels empty here, no tasks added!</p>
             <ul v-else>
-                <li v-for="(task, index) in tuesday">{{ task }} <button @click="removeTask(index)">X</button></li>
+                <li v-for="(task, index) in tuesday">{{ task }}<button @click="removeTaskTuesday(index)">X</button></li>
             </ul>
         </section>
         <section class="wrapper-taskList">
             <h2>Wednesday</h2>
             <p v-if="wednesday.length === 0">Feels empty here, no tasks added!</p>
             <ul v-else>
-                <li v-for="task in wednesday">{{ task }}</li>
+                <li v-for="(task, index) in wednesday">{{ task }}<button @click="removeTaskWednesday(index)">X</button></li>
             </ul>
         </section>
         <section class="wrapper-taskList">
             <h2>Thursday</h2>
             <p v-if="thursday.length === 0">Feels empty here, no tasks added!</p>
             <ul v-else>
-                <li v-for="task in thursday">{{ task }}</li>
+                <li v-for="(task, index) in thursday">{{ task }}<button @click="removeTaskThursday(index)">X</button></li>
             </ul>
         </section>
         <section class="wrapper-taskList">
             <h2>Friday</h2>
             <p v-if="friday.length === 0">Feels empty here, no tasks added!</p>
             <ul v-else>
-                <li v-for="task in friday">{{ task }}</li>
+                <li v-for="(task, index) in friday">{{ task }}<button @click="removeTaskFriday(index)">X</button></li>
             </ul>
         </section>
     </main>

@@ -2,6 +2,7 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Scope One', serif;
 }
 header{
     display: flex;
@@ -39,6 +40,9 @@ main{
     padding: 10px;
 }
 .wrapper-taskList h2{
+    text-align: center;
+}
+.wrapper-taskList p{
     text-align: center;
 }
 footer p{

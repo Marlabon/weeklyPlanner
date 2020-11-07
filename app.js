@@ -2,6 +2,7 @@ const app = Vue.createApp({
     data(){
         return{
             enteredTask: '',
+            logTask: '',
             picked: '',
             monday: [],
             tuesday: [],
@@ -23,11 +24,23 @@ const app = Vue.createApp({
             }else if(this.picked === 'Friday'){
                 this.friday.push(this.enteredTask);
             }
-            // this.dynamicArrayName.push(this.enteredTask);
+            this.logTask = this.enteredTask;
+            this.enteredTask = '';
         },
-        removeTask(){
-            this.monday.splice(0,1);
-            // this.dynamicArrayName.splice(dynamicStart,1);
+        removeTaskMonday(index){
+            this.monday.splice(index,1);
+        },
+        removeTaskTuesday(index){
+            this.tuesday.splice(index,1);
+        },
+        removeTaskWednesday(index){
+            this.wednesday.splice(index, 1);
+        },
+        removeTaskThursday(index){
+            this.thursday.splice(index, 1);
+        },
+        removeTaskFriday(index){
+            this.friday.splice(index, 1);
         }
     }
 })
