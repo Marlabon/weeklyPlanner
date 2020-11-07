@@ -4,6 +4,7 @@ const app = Vue.createApp({
             enteredTask: '',
             logTask: '',
             picked: '',
+            checked: false,
             monday: [],
             tuesday: [],
             wednesday: [],
@@ -41,6 +42,16 @@ const app = Vue.createApp({
         },
         removeTaskFriday(index){
             this.friday.splice(index, 1);
+        },
+        taskDone(){
+            this.checked = !this.checked;
+        }
+    },
+    computed:{
+        taskDoneStyleObject(){
+            return{
+                taskDone: this.checked
+            }
         }
     }
 })
