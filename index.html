@@ -45,19 +45,21 @@
         <h2>Monday</h2>
         <p v-if="monday.length === 0">Feels empty here, no tasks added!</p>
         <ul v-else>
-          <li 
+          <li
             v-for="(task, index) in monday"
             class="task-style"
             :class="taskDoneStyleObject"
           >
-            <input
-              type="checkbox"
-              id="checkbox"
-              v-model="checked"
-              @click="taskDone"
-            />
-            {{ task }}
-            <button @click="removeTaskMonday(index)">X</button>
+            <div class="task-input">
+              <input
+                type="checkbox"
+                id="checkbox"
+                v-model="checked"
+                @click="taskDone"
+              />
+              <button @click="removeTaskMonday(index)">X</button>
+            </div>
+            <p>{{ task }}</p>
           </li>
         </ul>
       </section>
@@ -65,8 +67,21 @@
         <h2>Tuesday</h2>
         <p v-if="tuesday.length === 0">Feels empty here, no tasks added!</p>
         <ul v-else>
-          <li v-for="(task, index) in tuesday">
-            {{ task }} <button @click="removeTaskTuesday(index)">X</button>
+          <li
+            v-for="(task, index) in tuesday"
+            class="task-style"
+            :class="taskDoneStyleObject"
+          >
+            <div class="task-input">
+              <input
+                type="checkbox"
+                id="checkbox"
+                v-model="checked"
+                @click="taskDone"
+              />
+              <button @click="removeTaskTuesday(index)">X</button>
+            </div>
+            <p>{{ task }}</p>
           </li>
         </ul>
       </section>
@@ -74,8 +89,21 @@
         <h2>Wednesday</h2>
         <p v-if="wednesday.length === 0">Feels empty here, no tasks added!</p>
         <ul v-else>
-          <li v-for="(task, index) in wednesday">
-            {{ task }} <button @click="removeTaskWednesday(index)">X</button>
+          <li
+            v-for="(task, index) in wednesday"
+            class="task-style"
+            :class="taskDoneStyleObject"
+          >
+            <div class="task-input">
+              <input
+                type="checkbox"
+                id="checkbox"
+                v-model="checked"
+                @click="taskDone"
+              />
+              <button @click="removeTaskWednesday(index)">X</button>
+            </div>
+            <p>{{ task }}</p>
           </li>
         </ul>
       </section>
@@ -83,8 +111,21 @@
         <h2>Thursday</h2>
         <p v-if="thursday.length === 0">Feels empty here, no tasks added!</p>
         <ul v-else>
-          <li v-for="(task, index) in thursday">
-            {{ task }} <button @click="removeTaskThursday(index)">X</button>
+          <li
+            v-for="(task, index) in thursday"
+            class="task-style"
+            :class="taskDoneStyleObject"
+          >
+            <div class="task-input">
+              <input
+                type="checkbox"
+                id="checkbox"
+                v-model="checked"
+                @click="taskDone"
+              />
+              <button @click="removeTaskThursday(index)">X</button>
+            </div>
+            <p>{{ task }}</p>
           </li>
         </ul>
       </section>
@@ -92,8 +133,21 @@
         <h2>Friday</h2>
         <p v-if="friday.length === 0">Feels empty here, no tasks added!</p>
         <ul v-else>
-          <li v-for="(task, index) in friday">
-            {{ task }} <button @click="removeTaskFriday(index)">X</button>
+          <li
+            v-for="(task, index) in friday"
+            class="task-style"
+            :class="taskDoneStyleObject"
+          >
+            <div class="task-input">
+              <input
+                type="checkbox"
+                id="checkbox"
+                v-model="checked"
+                @click="taskDone"
+              />
+              <button @click="removeTaskFriday(index)">X</button>
+            </div>
+            <p>{{ task }}</p>
           </li>
         </ul>
       </section>

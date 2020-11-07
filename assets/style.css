@@ -1,68 +1,77 @@
-body{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Scope One', serif;
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Scope One", serif;
 }
-header{
-    display: flex;
-    justify-content: center;
+header {
+  display: flex;
+  justify-content: center;
 }
-main{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
-.wrapper-userInput{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100vw;
+.wrapper-userInput {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
 }
-.wrapper-userInput h2{
-    text-align: center;
+.wrapper-userInput h2 {
+  text-align: center;
 }
-.wrapper-userInput div{
-    padding: 10px;
+.wrapper-userInput div {
+  padding: 10px;
 }
-.wrapper-setTask label{
-    display: block;
+.wrapper-setTask label {
+  display: block;
 }
-.wrapper-setTask button{
-    margin-left: 10px;
+.wrapper-setTask button {
+  margin-left: 10px;
 }
-.wrapper-taskList{
-    /* Overflow possibility! */
-    min-width: 150px;
-    max-width: 150px;
-    margin-bottom: 20px;
-    padding: 10px;
+.wrapper-taskList {
+  /* Overflow possibility! */
+  min-width: 150px;
+  max-width: 150px;
+  margin-bottom: 20px;
+  padding: 10px;
 }
-.wrapper-taskList h2{
-    text-align: center;
+.wrapper-taskList h2 {
+  text-align: center;
 }
-.wrapper-taskList p{
-    text-align: center;
+.wrapper-taskList p {
+  text-align: center;
 }
-.wrapper-taskList li{
-    text-align: center;
-    padding: 5px;
-    margin-bottom: 10px;
+.wrapper-taskList li {
+  text-align: center;
+  padding: 5px;
+  margin-bottom: 10px;
 }
-.wrapper-taskList button{
-    background-color: aquamarine;
-    border: solid 1px aquamarine;
-    margin-left: 20px;
+.wrapper-taskList button {
+  background-color: aquamarine;
+  border: solid 1px aquamarine;
+  margin-left: 20px;
 }
-.task-style{
-    list-style-type: none;
-    border-radius: 10px;
-    background-color: aquamarine;
+.wrapper-taskList ul {
+  padding-inline-start: 0;
 }
-.taskDone{
-    color: white;
-    background-color: red;
+.task-input {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: dashed white 2px;
+  padding-bottom: 5px;
 }
-footer p{
-    text-align: center;
+.task-style {
+  list-style-type: none;
+  border-radius: 10px;
+  background-color: aquamarine;
+}
+.taskDone {
+  color: white;
+  background-color: red;
+}
+footer p {
+  text-align: center;
 }
