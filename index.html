@@ -37,13 +37,14 @@
           <div class="wrapper-setTask">
             <label for="inputTasks">Type in your task:</label>
             <input type="text" id="inputTasks" v-model="enteredTask" />
-            <button @click="addTask">Add Task</button>
+            <button class="btn-addTask" @click="addTask">Add Task</button>
+            <button class="btn-deleteWeek" @click="deleteAllTaskForWeek">Clear Week</button>
             <p>You typed: {{picked}} - {{logTask}}</p>
           </div>
         </div>
       </section>
       <section class="wrapper-taskList">
-        <h2>Monday</h2>
+        <h2>Monday <img src="/assets/pics/remove.svg" alt="Delete all tasks in Monday" @click="removeAllTasksMonday"></h2>
         <p v-if="monday.length === 0">Feels empty here, no tasks added!</p>
         <ul v-else>
           <li
@@ -66,7 +67,7 @@
         </ul>
       </section>
       <section class="wrapper-taskList">
-        <h2>Tuesday</h2>
+        <h2>Tuesday <img src="/assets/pics/remove.svg" alt="Delete all tasks in Tuesday" @click="removeAllTasksTuesday"></h2>
         <p v-if="tuesday.length === 0">Feels empty here, no tasks added!</p>
         <ul v-else>
           <li
@@ -88,7 +89,7 @@
         </ul>
       </section>
       <section class="wrapper-taskList">
-        <h2>Wednesday</h2>
+        <h2>Wednesday <img src="/assets/pics/remove.svg" alt="Delete all tasks in Wednesday" @click="removeAllTasksWednesday"></h2>
         <p v-if="wednesday.length === 0">Feels empty here, no tasks added!</p>
         <ul v-else>
           <li
@@ -110,7 +111,7 @@
         </ul>
       </section>
       <section class="wrapper-taskList">
-        <h2>Thursday</h2>
+        <h2>Thursday <img src="/assets/pics/remove.svg" alt="Delete all tasks in Thursday" @click="removeAllTasksThursday"></h2>
         <p v-if="thursday.length === 0">Feels empty here, no tasks added!</p>
         <ul v-else>
           <li
@@ -132,7 +133,7 @@
         </ul>
       </section>
       <section class="wrapper-taskList">
-        <h2>Friday</h2>
+        <h2>Friday <img src="/assets/pics/remove.svg" alt="Delete all tasks in Friday" @click="removeAllTasksFriday"></h2>
         <p v-if="friday.length === 0">Feels empty here, no tasks added!</p>
         <ul v-else>
           <li

@@ -32,18 +32,35 @@ main {
 .wrapper-setTask label {
   display: block;
 }
-.wrapper-setTask button {
-  margin-left: 10px;
+.btn-addTask {
+  border: none;
+  color: white;
+  background-color: #53B3E3;
+  border-radius: 10px;
+  padding: 5px;
+  margin: 0 10px 0 10px;
+}
+.btn-deleteWeek{
+  border: none;
+  color: white;
+  background-color: #f44336;
+  border-radius: 10px;
+  padding: 5px;
 }
 .wrapper-taskList {
   /* Overflow possibility! */
   min-width: 150px;
-  max-width: 150px;
+  /* max-width: 150px; */
   margin-bottom: 20px;
   padding: 10px;
 }
 .wrapper-taskList h2 {
   text-align: center;
+}
+.wrapper-taskList img{
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
 }
 .wrapper-taskList p {
   text-align: center;

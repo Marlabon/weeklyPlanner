@@ -38,8 +38,18 @@ const app = Vue.createApp({
             this.logTask = this.enteredTask;
             this.enteredTask = '';
         },
+        deleteAllTaskForWeek(){
+            this.monday = [];
+            this.tuesday = [];
+            this.wednesday = [];
+            this.thursday = [];
+            this.friday = [];
+        },
         removeTaskMonday(index){
             this.monday.splice(index,1);
+        },
+        removeAllTasksMonday(){
+            this.monday = [];
         },
         removeTaskTuesday(index){
             this.tuesday.splice(index,1);
