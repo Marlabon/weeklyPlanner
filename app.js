@@ -54,14 +54,26 @@ const app = Vue.createApp({
         removeTaskTuesday(index){
             this.tuesday.splice(index,1);
         },
+        removeAllTasksTuesday(){
+            this.tuesday = [];
+        },
         removeTaskWednesday(index){
             this.wednesday.splice(index, 1);
+        },
+        removeAllTasksWednesday(){
+            this.wednesday = [];
         },
         removeTaskThursday(index){
             this.thursday.splice(index, 1);
         },
+        removeAllTasksThursday(){
+            this.thursday = [];
+        },
         removeTaskFriday(index){
             this.friday.splice(index, 1);
+        },
+        removeAllTasksFriday(){
+            this.friday = [];
         },
         taskDone(){
             this.checked = !this.checked;
