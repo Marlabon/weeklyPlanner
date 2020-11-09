@@ -8,6 +8,10 @@ header {
   display: flex;
   justify-content: center;
 }
+.logo{
+  color: #53B3E3;
+  font-family: 'Pacifico', cursive;
+}
 main {
   display: flex;
   flex-wrap: wrap;
@@ -50,8 +54,8 @@ main {
   margin-bottom: 10px;
 }
 .wrapper-taskList button {
-  background-color: aquamarine;
-  border: solid 1px aquamarine;
+  background-color: #53B3E3;
+  border: solid 1px #53B3E3;
   margin-left: 20px;
 }
 .wrapper-taskList ul {
@@ -66,7 +70,7 @@ main {
 .task-style {
   list-style-type: none;
   border-radius: 10px;
-  background-color: aquamarine;
+  background-color: #53B3E3;
 }
 .taskDone {
   color: white;
