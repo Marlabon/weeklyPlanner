@@ -65,7 +65,12 @@ main {
   display: flex;
   justify-content: space-between;
   border-bottom: dashed white 2px;
-  padding-bottom: 5px;
+  padding-bottom: 10px;
+}
+.task-input img{
+  width: 20px;
+  height: 20px;
+  padding: 5px 5px 0px 0;
 }
 .task-style {
   list-style-type: none;
@@ -74,7 +79,7 @@ main {
 }
 .taskDone {
   color: white;
-  background-color: red;
+  opacity: 0.60;
 }
 footer p {
   text-align: center;

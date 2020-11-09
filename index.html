@@ -48,6 +48,7 @@
         <ul v-else>
           <li
             v-for="(task, index) in monday"
+            :key="task"
             class="task-style"
             :class="taskDoneStyleObject"
           >
@@ -58,7 +59,7 @@
                 v-model="checked"
                 @click="taskDone"
               />
-              <button @click="removeTaskMonday(index)">X</button>
+              <img src="/assets/pics/001-close.svg" alt="Delete task icon" @click="removeTaskMonday(index)">
             </div>
             <p>{{ task }}</p>
           </li>
@@ -80,7 +81,7 @@
                 v-model="checked"
                 @click="taskDone"
               />
-              <button @click="removeTaskTuesday(index)">X</button>
+              <img src="/assets/pics/001-close.svg" alt="Delete task" @click="removeTaskTuesday(index)">
             </div>
             <p>{{ task }}</p>
           </li>
@@ -102,7 +103,7 @@
                 v-model="checked"
                 @click="taskDone"
               />
-              <button @click="removeTaskWednesday(index)">X</button>
+              <img src="/assets/pics/001-close.svg" alt="Delete task" @click="removeTaskWednesday(index)">
             </div>
             <p>{{ task }}</p>
           </li>
@@ -124,7 +125,7 @@
                 v-model="checked"
                 @click="taskDone"
               />
-              <button @click="removeTaskThursday(index)">X</button>
+              <img src="/assets/pics/001-close.svg" alt="Delete task" @click="removeTaskThursday(index)">
             </div>
             <p>{{ task }}</p>
           </li>
@@ -146,7 +147,7 @@
                 v-model="checked"
                 @click="taskDone"
               />
-              <button @click="removeTaskFriday(index)">X</button>
+              <img src="/assets/pics/001-close.svg" alt="Delete task" @click="removeTaskFriday(index)">
             </div>
             <p>{{ task }}</p>
           </li>
