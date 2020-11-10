@@ -57,7 +57,7 @@ main {
 .wrapper-taskList h2 {
   text-align: center;
 }
-.wrapper-taskList img{
+.delete-day-icon{
   width: 25px;
   height: 25px;
   vertical-align: middle;
@@ -78,16 +78,21 @@ main {
 .wrapper-taskList ul {
   padding-inline-start: 0;
 }
-.task-input {
+.wrapper-task-input {
   display: flex;
   justify-content: space-between;
   border-bottom: dashed white 2px;
   padding-bottom: 10px;
 }
-.task-input img{
-  width: 20px;
-  height: 20px;
+.delete-task-icon{
+  width: 25px;
+  height: 25px;
   padding: 5px 5px 0px 0;
+}
+.check-checkbox-icon{
+  width: 30px;
+  height: 30px;
+  padding: 5px 0 0 5px;
 }
 .task-style {
   list-style-type: none;
