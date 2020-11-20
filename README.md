@@ -13,8 +13,7 @@ Your week is a mess, you have no structure and the weekends don't feel good any 
 
 ## To-do list
 To-do list:
-* Design and style
-* Delete a task or checkout a task
+*Moving to Single File Components
 
 For the future:
 * Store tasks
